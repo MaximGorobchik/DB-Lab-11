@@ -8,8 +8,7 @@ begin
 if exists(select TeacherName from Learn group by TeacherName having sum(HoursCount) > 500)
 begin
 rollback tran
-print 'Помилка. Перевищені години для викладачів'
---exec proc3 6,'Софія', 150
+print 'ГЏГ®Г¬ГЁГ«ГЄГ . ГЏГҐГ°ГҐГўГЁГ№ГҐГ­Ві ГЈГ®Г¤ГЁГ­ГЁ Г¤Г«Гї ГўГЁГЄГ«Г Г¤Г Г·ВіГў'
 end
 end
 
@@ -24,10 +23,6 @@ if exists(select Student.FirstName, Student.LastName, sum(HoursCount) from Learn
 group by Student.FirstName, Student.LastName having sum(HoursCount) > 1000)
 begin
 rollback tran
-print 'Помилка. Перевищені години для студентів'
---exec proc3 6,'Софія', 150
+print 'ГЏГ®Г¬ГЁГ«ГЄГ . ГЏГҐГ°ГҐГўГЁГ№ГҐГ­Ві ГЈГ®Г¤ГЁГ­ГЁ Г¤Г«Гї Г±ГІГіГ¤ГҐГ­ГІВіГў'
 end
 end
-
---drop trigger trigger5_teachers
---drop trigger trigger5_students
